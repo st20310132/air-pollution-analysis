@@ -18,7 +18,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Add custom CSS for styling
+# CSS styling for pages
 st.markdown("""
 <style>
     .main-header {
@@ -60,7 +60,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Initialize session state variables if they don't exist
+# Initialize session state variables
 if 'data' not in st.session_state:
     st.session_state.data = None
 if 'target_column' not in st.session_state:
@@ -72,6 +72,7 @@ if 'model' not in st.session_state:
 if 'predictions' not in st.session_state:
     st.session_state.predictions = None
 
+# Heading
 st.markdown('<h1 class="main-header">Data Analysis Application</h1>', unsafe_allow_html=True)
 
 # Sidebar
